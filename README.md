@@ -33,12 +33,12 @@ dotnet run
 ## Usage
 
 ### **API Endpoints**
-| HTTP Method |         Endpoint         | Query Parameters |                    Description                    |   |
-|:-----------:|:------------------------:|:----------------:|:-------------------------------------------------:|---|
-| GET         | /api/calculator/add      | a, b             |                 Adds two numbers                  |   |
-| GET         | /api/calculator/subtract | a, b             |               Subtracts two numbers               |   |
-| GET         | /api/calculator/multiply | a, b             |              Multiplies two numbers               |   |
-| GET         | /api/calculator/divide   | a, b             | Divides two numbers |   |
+| HTTP Method |         Endpoint         | Query Parameters |                    Description                    |
+|:-----------:|:------------------------:|:----------------:|:-------------------------------------------------:|
+| GET         | /api/calculator/add      | a, b             |                 Adds two numbers                  |
+| GET         | /api/calculator/subtract | a, b             |               Subtracts two numbers               |
+| GET         | /api/calculator/multiply | a, b             |              Multiplies two numbers               |
+| GET         | /api/calculator/divide   | a, b             | Divides two numbers |
 
 ### **Example Usage**
 To add 5 + 3, make a GET request
