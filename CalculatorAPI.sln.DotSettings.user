@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0b6c5d3b_002D42a2_002D4ffb_002Da286_002Dd23753d81e69/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Add_ReturnsCorrectResult" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::DBB98F76-EBCD-4DE5-9FEF-F8C230A264D2::net8.0::CalculatorAPI.Tests.Services.CalculatorServiceTests.Add_ReturnsCorrectResult&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::DBB98F76-EBCD-4DE5-9FEF-F8C230A264D2::net8.0::CalculatorAPI.Tests.Services.CalculatorServiceTests.Subtract_ReturnsCorrectResult&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::DBB98F76-EBCD-4DE5-9FEF-F8C230A264D2::net8.0::CalculatorAPI.Tests.Services.CalculatorServiceTests.Divide_ThrowsException_WhenDividingByZero&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::DBB98F76-EBCD-4DE5-9FEF-F8C230A264D2::net8.0::CalculatorAPI.Tests.Controllers.CalculatorControllerTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
