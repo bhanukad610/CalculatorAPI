@@ -72,6 +72,6 @@ public class CalculatorServiceTests
         // Act
         
         // Assert
-        Assert.Throws<DivideByZeroException>(() => _calculatorService.Divide(10, 0));
+        Assert.Throws<DivideByZeroException>(() => _calculatorService.Divide(a, b));
     }
 }
