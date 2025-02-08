@@ -30,6 +30,7 @@ cd CalculatorAPI
 dotnet build
 dotnet run
 ```
+The API will now be available at http://localhost:5083
 ## Option 2: Using Docker
 If you prefer running the API inside a Docker container:
 ### **1. Pull the Docker Image**
@@ -56,7 +57,7 @@ The API will now be available at http://localhost:5000.
 ### **Example Usage**
 To add 5 + 3, make a GET request
 ```sh
-curl "http://localhost:5000/api/calculator/add?a=5&b=3"
+curl "http://localhost:5083/api/calculator/add?a=5&b=3"
 ```
 Expected Response:
 ```sh
