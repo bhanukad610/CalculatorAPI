@@ -21,7 +21,7 @@ A simple **RESTful Calculator API** built with **ASP.NET Core** that supports fo
 ## Option 1: Using the codebase
 ### **1. Clone the Repository**
 ```sh
-git clone https://github.com/bhanukad610/portfolio.git
+git clone https://github.com/bhanukad610/CalculatorAPI.git
 cd CalculatorAPI
 ```
 
