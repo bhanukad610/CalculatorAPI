@@ -18,6 +18,7 @@ A simple **RESTful Calculator API** built with **ASP.NET Core** that supports fo
 - [Git](https://git-scm.com/)
 - (Optional) [Docker](https://www.docker.com/)
 
+## Option 1: Using the codebase
 ### **1. Clone the Repository**
 ```sh
 git clone https://github.com/bhanukad610/portfolio.git
@@ -29,6 +30,18 @@ cd CalculatorAPI
 dotnet build
 dotnet run
 ```
+## Option 2: Using Docker
+If you prefer running the API inside a Docker container:
+### **1. Pull the Docker Image**
+```sh
+docker pull bhanukad/calculator-api:latest
+```
+
+### **2. Run the Container**
+```sh
+docker run -p 5000:5000 bhanukad/calculator-api:latest
+```
+The API will now be available at http://localhost:5000.
 
 ## Usage
 
