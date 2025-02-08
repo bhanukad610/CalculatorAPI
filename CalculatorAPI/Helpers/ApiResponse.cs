@@ -3,8 +3,7 @@ using System.Text.Json.Serialization;
 namespace CalculatorAPI.Helpers;
 
 /// <summary>
-/// Standardized API response wrapper for consistent JSON output.
-/// Omits null values to keep responses clean.
+/// Standardized API response wrapper for consistent JSON output. Omits null values to keep responses clean.
 /// </summary>
 /// <typeparam name="T">The type of the result object.</typeparam>
 public class ApiResponse<T>
