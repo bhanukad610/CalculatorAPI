@@ -1,4 +1,5 @@
 using CalculatorAPI.Controllers;
+using CalculatorAPI.Helpers;
 using CalculatorAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
@@ -29,7 +30,7 @@ namespace CalculatorAPI.Tests.Controllers
             // Assert
             Assert.NotNull(result);
             Assert.Equal(200, result.StatusCode);
-            Assert.Equal(8.0, result.Value);
+            Assert.Equivalent(ApiResponse<double>.Success(8.0), result.Value);
         }
 
         [Fact]
@@ -42,7 +43,7 @@ namespace CalculatorAPI.Tests.Controllers
 
             Assert.NotNull(result);
             Assert.Equal(200, result.StatusCode);
-            Assert.Equal(6.0, result.Value);
+            Assert.Equivalent(ApiResponse<double>.Success(6.0), result.Value);
         }
 
         [Fact]
@@ -55,7 +56,7 @@ namespace CalculatorAPI.Tests.Controllers
 
             Assert.NotNull(result);
             Assert.Equal(200, result.StatusCode);
-            Assert.Equal(42.0, result.Value);
+            Assert.Equivalent(ApiResponse<double>.Success(42.0), result.Value);
         }
 
         [Fact]
@@ -68,7 +69,7 @@ namespace CalculatorAPI.Tests.Controllers
 
             Assert.NotNull(result);
             Assert.Equal(200, result.StatusCode);
-            Assert.Equal(5.0, result.Value);
+            Assert.Equivalent(ApiResponse<double>.Success(5.0), result.Value);
         }
 
         [Fact]
@@ -81,7 +82,7 @@ namespace CalculatorAPI.Tests.Controllers
 
             Assert.NotNull(result);
             Assert.Equal(400, result.StatusCode);
-            Assert.Equal("Cannot divide by zero.", result.Value);
+            Assert.Equivalent(ApiResponse<double>.Fail("Division by zero is not allowed."), result.Value);
         }
     }
 }

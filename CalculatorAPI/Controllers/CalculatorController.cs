@@ -1,3 +1,4 @@
+using CalculatorAPI.Helpers;
 using CalculatorAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -5,39 +6,40 @@ namespace CalculatorAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class CalculatorController : ControllerBase
+public class CalculatorController(ICalculatorService calculatorService) : ControllerBase
 {
-    private readonly ICalculatorService _calculatorService;
-
-    public CalculatorController(ICalculatorService calculatorService)
-    {
-        _calculatorService = calculatorService;
-    }
-    
     [HttpGet("add")]
     public IActionResult Add([FromQuery] double a, [FromQuery] double b)
     {
-        return Ok(_calculatorService.Add(a, b));
+        var result = calculatorService.Add(a, b);
+        return Ok(ApiResponse<double>.Success(result));
     }
     
     [HttpGet("subtract")]
     public IActionResult Subtract([FromQuery] double a, [FromQuery] double b)
     {
-        return Ok(_calculatorService.Subtract(a, b));
+        var result = calculatorService.Subtract(a, b);
+        return Ok(ApiResponse<double>.Success(result));
     }
 
     [HttpGet("multiply")]
     public IActionResult Multiply([FromQuery] double a, [FromQuery] double b)
     {
-        return Ok(_calculatorService.Multiply(a, b));
+        var result = calculatorService.Multiply(a, b);
+        return Ok(ApiResponse<double>.Success(result));
     }
 
     [HttpGet("divide")]
     public IActionResult Divide([FromQuery] double a, [FromQuery] double b)
     {
-        if (b == 0)
-            return BadRequest("Cannot divide by zero.");
-
-        return Ok(_calculatorService.Divide(a, b));
+        try
+        {
+            var result = calculatorService.Divide(a, b);
+            return Ok(ApiResponse<double>.Success(result));
+        }
+        catch (DivideByZeroException)
+        {
+            return BadRequest(ApiResponse<double>.Fail("Division by zero is not allowed."));
+        }
     }
 }
